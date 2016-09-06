@@ -98,6 +98,11 @@ jQuery(document).ready(function($){
 				// if visible - we are not on a mobile device 
 				var	videoUrl = videoWrapper.data('video'),
 					video = $('<video loop><source src="'+videoUrl+'.mp4" type="video/mp4" /><source src="'+videoUrl+'.webm" type="video/webm" /></video>');
+				alert(videoWrapper.data('video'));
+				alert("Video is clicked");
+
+
+
 				video.appendTo(videoWrapper);
 				// play video if first slide
 				if(videoWrapper.parent('.cd-bg-video.selected').length > 0) video.get(0).play();
