@@ -8,4 +8,9 @@ module ApplicationHelper
 			page_title + "|" + base_title
 		end
 	end
+
+	def noext_asset_path(path)
+		filepath = asset_path(path)
+		File.join(File.dirname(filepath), File.basename(filepath, '.*'))
+	end
 end
