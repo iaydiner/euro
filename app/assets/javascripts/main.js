@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-	alert("xxx");
+	$("body").css("background-color","blue");
 	var slidesWrapper = $('.cd-hero-slider');
 
 	//check if a .cd-hero-slider exists in the DOM 
