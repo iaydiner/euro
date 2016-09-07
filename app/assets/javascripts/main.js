@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-	alert("okey");
+
 	var slidesWrapper = $('.cd-hero-slider');
 
 	//check if a .cd-hero-slider exists in the DOM 
@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
 			slidesNumber = slidesWrapper.children('li').length,
 			visibleSlidePosition = 0,
 			autoPlayId,
-			autoPlayDelay = 5000;
+			autoPlayDelay = 7000;
 
 		//upload videos (if not on mobile devices)
 		uploadVideo(slidesWrapper);
