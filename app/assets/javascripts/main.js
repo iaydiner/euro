@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-	alarm("okey");
+	alert("okey");
 	var slidesWrapper = $('.cd-hero-slider');
 
 	//check if a .cd-hero-slider exists in the DOM 
