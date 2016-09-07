@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-	$("body").css("background-color","blue");
+	alarm("okey");
 	var slidesWrapper = $('.cd-hero-slider');
 
 	//check if a .cd-hero-slider exists in the DOM 
@@ -99,10 +99,6 @@ jQuery(document).ready(function($){
 				// if visible - we are not on a mobile device 
 				var	videoUrl = videoWrapper.data('video'),
 					video = $('<video loop><source src="'+videoUrl+'.mp4" type="video/mp4" /><source src="'+videoUrl+'.webm" type="video/webm" /></video>');
-				alert(videoWrapper.data('video'));
-				alert("Video is clicked");
-
-
 
 				video.appendTo(videoWrapper);
 				// play video if first slide
