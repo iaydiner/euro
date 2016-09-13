@@ -7,8 +7,8 @@ Rails.application.routes.draw do
 
   root 'welcome#home'
   get 'about', to:'welcome#about'
-
-  #resources :gems
+  #below line adds many routes automaticly
+  resources :gemstones
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
