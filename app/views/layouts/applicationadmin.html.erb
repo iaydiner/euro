@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= full_title(yield(:title)) %> | European Design</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+  </script>
+  <![endif]-->
+</head>
+<body>
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-xs-12 col-lg-12 page-header" style="background-color: red;border:1px solid red;color:white;">
+  <p>
+    <h1>European Design Web Administration</h1>
+  </p>
+  </div>
+ </div>
+ <div class="row">
+  <div class="col-xs-2 col-lg-2" style="background-color: mintcream;border:0px solid;border-radius:10px;padding:0px;">
+  <ul class="nav nav-pills nav-stacked">
+    <li role="presentation" class="active"><%= link_to 'Administration', admin_path %></li>
+    <li role="presentation"><%= link_to 'Gemstones', admgemstones_path %></li>
+    <li role="presentation"><a href="#">Diamonds</a></li>
+    <li role="presentation"><a href="#">Finished Jewelry</a></li>
+    <li role="presentation"><a href="#">Findings</a></li>
+    <li role="presentation"><a href="#">Equipment</a></li>
+    <li role="presentation"><a href="#">Tools</a></li>
+    <li role="presentation"><a href="#">Users</a></li>
+    <li role="presentation"><%= link_to 'Client Home Page', root_path %></li>
+  </ul>
+  </div>
+  <div class="col-xs-10 col-lg-10">
+
+     <%= yield %>
+
+  </div>
+ </div>
+</div>
+   
+
+</body>
+</html>

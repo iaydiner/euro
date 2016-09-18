@@ -1,0 +1,38 @@
+<div class="container">
+
+  <h2><b>Gem Listings</b></h2><br>
+  <p>Please verify gems availability with our store experts:</p><br>
+  <p><%= link_to '<button type="button" class="btn btn-success btn-md">New Gemstone</button>'.html_safe, new_admgemstone_path %></p>
+  <div class="table-responsive">
+  <table class="table table-hover table-condensed table-striped">
+  	<thead>
+		<tr>
+		<th>ID</th>
+		<th>Shape</th>
+		<th>Size</th>
+		<th>Description</th>
+		<th>Color Tone</th>
+		<th>Type</th>
+		<th>Brand</th>
+		<th style="text-align: right;">Price</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @admgemstonesall.each do |g| %>
+			<tr >
+				<td style="vertical-align:middle;"><%= g.id %></td>
+				<td style="vertical-align:middle;"><%= g.shape %></td>
+				<td style="vertical-align:middle;"><%= g.size %></td>
+				<td style="vertical-align:middle;"><%= g.description %></td>
+				<td style="vertical-align:middle;"><%= g.colortone %></td>
+				<td style="vertical-align:middle;"><%= g.gemtype %></td>
+				<td style="vertical-align:middle;"><%= g.brand %></td>
+				<td style="vertical-align:middle;text-align: right;"><%= g.price %></td>
+				<td style="vertical-align:middle;text-align: center;"><%= link_to '<button type="button" class="btn btn-warning btn-sm">Edit</button>'.html_safe, edit_admgemstone_path(g) %></td>
+				<td style="vertical-align:middle;"><%= link_to '<button type="button" class="btn btn-danger btn-sm">Delete</button>'.html_safe, admgemstone_path(g), method: :delete, data: {confirm: "Are you sure?"} %></td>
+			<tr>
+		<% end %>
+	</tbody>
+  </table>
+</div>
+</div>

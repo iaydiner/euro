@@ -5,4 +5,15 @@ class WelcomeController < ApplicationController
 
 	def about
 	end
+
+	def admin
+		render :layout => "applicationadmin"
+	end
+
+	def gemstone
+		##@admgemstonesall=Admgemstone.all
+		##@admgemstonesall=Admgemstone.where(shape: 'Round').load
+		@admgemstonesall=Admgemstone.where(shape: ["Round","Marquis","Pear"]).load
+		render "welcome/gemstone"
+	end
 end

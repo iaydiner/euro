@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160909221132) do
+ActiveRecord::Schema.define(version: 20160916214221) do
 
   create_table "gemstones", force: :cascade do |t|
     t.string  "shape"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20160909221132) do
     t.string  "description"
     t.string  "colortone"
     t.decimal "price",       precision: 10, scale: 2
+    t.string  "gemtype"
+    t.string  "brand"
   end
 
 end

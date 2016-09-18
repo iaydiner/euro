@@ -7,8 +7,15 @@ Rails.application.routes.draw do
 
   root 'welcome#home'
   get 'about', to:'welcome#about'
-  #below line adds many routes automaticly
-  resources :gemstones
+
+  ## Admin actions
+  get 'admin', to:'welcome#admin'
+
+  ## Navigation Header - Gemstone
+  get 'gemstones', to:'welcome#gemstone'
+
+  ##below line adds many routes automaticly
+  resources :admgemstones
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

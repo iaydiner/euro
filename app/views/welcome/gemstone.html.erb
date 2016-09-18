@@ -1,0 +1,35 @@
+<div class="container">
+
+  <h2><b>Gem Listings</b></h2><br>
+  <p>Please verify gems availability with our store experts:</p><br>
+  <div class="table-responsive">
+  <table class="table table-hover ">
+  	<thead>
+		<tr>
+		<th>ID</th>
+		<th>Shape</th>
+		<th>Size</th>
+		<th>Description</th>
+		<th>Color Tone</th>
+		<th>Type</th>
+		<th>Brand</th>		
+		<th style="text-align: right;">Price</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @admgemstonesall.each do |g| %>
+			<tr>
+				<td style="vertical-align:middle;"><%= g.id %></td>
+				<td style="vertical-align:middle;"><%= g.shape %></td>
+				<td style="vertical-align:middle;"><%= g.size %></td>
+				<td style="vertical-align:middle;"><%= g.description %></td>
+				<td style="vertical-align:middle;"><%= g.colortone %></td>
+				<td style="vertical-align:middle;"><%= g.gemtype %></td>
+				<td style="vertical-align:middle;"><%= g.brand %></td>
+				<td style="vertical-align:middle;text-align: right;"><%= g.price %></td>
+			<tr>
+		<% end %>
+	</tbody>
+  </table>
+</div>
+</div>
