@@ -13,7 +13,7 @@ class WelcomeController < ApplicationController
 	def gemstone
 		##@admgemstonesall=Admgemstone.all
 		##@admgemstonesall=Admgemstone.where(shape: 'Round').load
-		@admgemstonesall=Admgemstone.where(shape: ["Round","Marquis","Pear"]).load
+		@admgemstonesall=Admgemstone.where(shape: ["Round","Square","Trillium","Marquis","Pear"]).load
 		render "welcome/gemstone"
 	end
 end
