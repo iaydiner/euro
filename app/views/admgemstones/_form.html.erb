@@ -1,0 +1,36 @@
+<%= form_for gemstone do |f| %>
+	<p>
+		<%= f.label :shape %><br>
+		<%= f.select :shape, Admgemstone::SHAPES -%>
+	</p>
+	<p>
+		<%= f.label :size %><br>
+		<%= f.text_field :size %>
+	</p>
+	<p>
+		<%= f.label :description %>
+		<br>
+		<%= f.text_field :description %>
+	</p>
+	<p>
+		<%= f.label :colortone %><br>
+		<%= f.text_field :colortone %>
+	</p>
+	<p>
+		<%= f.label :gemtype, 'Type' %>
+		<br>
+		<%= f.select :gemtype, Admgemstone::GEM_TYPES %>
+	</p>
+		<p>
+		<%= f.label :brand %><br>
+		<%= f.text_field :brand %>
+	</p>
+	<p>
+		<%= f.label :price %><br>
+		<%= f.text_field :price %>
+	</p>
+	<p>
+		<%= f.submit update ? "Update" : "Create Gemstone"%>
+	</p>
+
+<% end %>
