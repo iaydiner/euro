@@ -1,5 +1,6 @@
 class Admgemstone < ActiveRecord::Base
 	self.table_name = "gemstones"
+	scope :shape, ->(shapes) { where(:shape => shapes) }
 	SHAPES = [
 		"ROUND",
 		"OVAL",

@@ -1,11 +1,11 @@
 class AdmgemstonesController < ApplicationController
 
 	layout "applicationadmin"
-
+	has_scope :shape, type: :array
 	def index
-		@admgemstonesall = Admgemstone.all
-		
-		##render :layout => "application"
+		@admgemstonesall = apply_scopes(Admgemstone).all
+
+
 	end
 
 	def new

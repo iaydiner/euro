@@ -2,6 +2,15 @@
 
   <h2><b>Gem Listings</b></h2><br>
   <p>Please verify gems availability with our store experts:</p><br>
+  <form action=''>
+  <%- Admgemstone::SHAPES.each do |shape| -%>
+    <label>
+      <%= check_box_tag 'shape[]', shape, (params[:shape] && params[:shape].include?(shape)) -%>
+      <%= shape -%>
+    </label>
+  <%- end -%>
+  <button type='submit' class="btn btn-info">Filter</button>
+  </form>
   <%= link_to 'New Gemstone', new_admgemstone_path, class: 'btn btn-success btn-md' -%>
 
   <div class="table-responsive">
