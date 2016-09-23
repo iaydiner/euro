@@ -3,16 +3,17 @@ class AdmgemstonesController < ApplicationController
 	layout "applicationadmin"
 
 	def index
-	@admgemstonesall=Admgemstone.all
-	##render :layout => "application"
+		@admgemstonesall = Admgemstone.all
+		
+		##render :layout => "application"
 	end
 
 	def new
-	@admgemstone=Admgemstone.new
+		@admgemstone = Admgemstone.new
 	end
 
 	def create
-		@admgemstone=Admgemstone.new(admgemstone_params)
+		@admgemstone = Admgemstone.new(admgemstone_params)
 		if @admgemstone.save
 			## if we sucseed we need to inform user and then redirect
 			flash[:notice]="Gemstone was successfully created!"
@@ -25,13 +26,13 @@ class AdmgemstonesController < ApplicationController
 	end
 
 	def edit
-		@admgemstone=Admgemstone.find(params[:id])	
+		@admgemstone = Admgemstone.find(params[:id])
 	end
 
 	def update
-		@admgemstone=Admgemstone.find(params[:id])
+		@admgemstone = Admgemstone.find(params[:id])
 		if @admgemstone.update(admgemstone_params)
-			flash[:notice]="Gemstone record was successfully updated!"
+			flash[:notice] = "Gemstone record was successfully updated!"
 			redirect_to admgemstone_path(@admgemstone)
 		else
 			render 'edit'
@@ -40,11 +41,11 @@ class AdmgemstonesController < ApplicationController
 
 	def show
 		##It should show specific gemstone for that reason using ID
-		@admgemstone=Admgemstone.find(params[:id])
+		@admgemstone = Admgemstone.find(params[:id])
 	end
 
 	def destroy
-		@admgemstone=Admgemstone.find(params[:id])
+		@admgemstone = Admgemstone.find(params[:id])
 		@admgemstone.destroy
 		flash[:notice]="Gemstone was successfully deleted"
 		redirect_to admgemstones_path

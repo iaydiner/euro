@@ -12,7 +12,7 @@
 <%= form_for @admgemstone do |f| %>
 	<p>
 		<%= f.label :shape %><br>
-		<%= f.text_field :shape %>
+		<%= f.select :shape, Admgemstone::SHAPES -%>
 	</p>
 	<p>
 		<%= f.label :size %><br>
@@ -30,7 +30,7 @@
 	<p>
 		<%= f.label :gemtype, 'Type' %>
 		<br>
-		<%= f.text_field :gemtype %>
+		<%= f.select :gemtype, Admgemstone::GEM_TYPES %>
 	</p>
 		<p>
 		<%= f.label :brand %><br>

@@ -1,24 +1,31 @@
 <h1>Showing selected gemstone</h1>
 
-<p>Shape: <%= @admgemstone.shape %>
+<p>
+  Shape: <%= @admgemstone.shape %>
 </p>
 
-<p>Size: <%= @admgemstone.size %>
+<p>
+  Size: <%= @admgemstone.size %>
 </p>
 
-<p>Description: <%= @admgemstone.description %>
+<p>
+  Description: <%= @admgemstone.description %>
 </p>
 
-<p>Color Tone: <%= @admgemstone.colortone %>
+<p>
+  Color Tone: <%= @admgemstone.colortone %>
 </p>
 
-<p>Type: <%= @admgemstone.gemtype %>
+<p>
+  Type: <%= @admgemstone.gemtype %>
 </p>
 
-<p>Brand: <%= @admgemstone.brand %>
+<p>
+  Brand: <%= @admgemstone.brand %>
 </p>
 
-<p>Price: <%= @admgemstone.price %>
+<p>
+  Price: <%= number_to_currency @admgemstone.price %>
 </p>
 
 <%= link_to "Edit this gemstone", edit_admgemstone_path(@admgemstone) %> |
