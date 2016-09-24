@@ -1,5 +1,27 @@
 class Admgemstone < ActiveRecord::Base
 	self.table_name = "gemstones"
+	scope :shape, ->(shapes) { where(:shape => shapes) }
+	SHAPES = [
+		"ROUND",
+		"OVAL",
+		"SQUARE",
+		"MARQUIS",
+		"PEAR",
+		"STRAIGHT_BAGUETTE",
+		"TAPERED_BAGUETTE",
+		"EMERALD_OCTAGON",
+		"RECTANGLE",
+		"CUSHION",
+		"HEART",
+		"TRIANGLE",
+		"TRILLIUM"
+	]
+
+	GEM_TYPES = [
+		"GENUINE",
+		"SYNTHETIC"
+	]
+
 	validates :shape, presence: true, length: {maximum:50}
 	validates :size, presence: true, length: {maximum:50}
 	validates :description, presence: true, length: {maximum:50}
@@ -7,6 +29,6 @@ class Admgemstone < ActiveRecord::Base
 	validates :gemtype, presence: true, length: {maximum:50}
 	validates :brand, length: {maximum:50}
 	validates :price, presence: true, length: {maximum:50}
-	validates_inclusion_of :gemtype, in: ["Genuine", "Synthetic"]
-	validates_inclusion_of :shape, in: ["Round", "Oval", "Square","Marquis","Pear","Straight Baguette","Tapered Baguette","Emerald Octagon","Rectangle","Cushion","Heart","Triangle","Trillium"]
+	validates_inclusion_of :gemtype, in: GEM_TYPES
+	validates_inclusion_of :shape, in: SHAPES
 end

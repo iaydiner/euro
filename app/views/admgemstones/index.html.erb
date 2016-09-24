@@ -2,34 +2,45 @@
 
   <h2><b>Gem Listings</b></h2><br>
   <p>Please verify gems availability with our store experts:</p><br>
-  <p><%= link_to '<button type="button" class="btn btn-success btn-md">New Gemstone</button>'.html_safe, new_admgemstone_path %></p>
+  <form action=''>
+  <%- Admgemstone::SHAPES.each do |shape| -%>
+    <label>
+      <%= check_box_tag 'shape[]', shape, (params[:shape] && params[:shape].include?(shape)) -%>
+      <%= shape -%>
+    </label>
+  <%- end -%>
+  <button type='submit' class="btn btn-info">Filter</button>
+  </form>
+  <%= link_to 'New Gemstone', new_admgemstone_path, class: 'btn btn-success btn-md' -%>
+
   <div class="table-responsive">
   <table class="table table-hover table-condensed table-striped">
   	<thead>
-		<tr>
-		<th>ID</th>
-		<th>Shape</th>
-		<th>Size</th>
-		<th>Description</th>
-		<th>Color Tone</th>
-		<th>Type</th>
-		<th>Brand</th>
-		<th style="text-align: right;">Price</th>
-		</tr>
-	</thead>
+  		<tr>
+    		<th>ID</th>
+    		<th>Shape</th>
+    		<th>Size</th>
+    		<th>Description</th>
+    		<th>Color Tone</th>
+    		<th>Type</th>
+    		<th>Brand</th>
+    		<th>Price</th>
+        <th colspan="2"></th>
+  		</tr>
+  	</thead>
 	<tbody>
 		<% @admgemstonesall.each do |g| %>
 			<tr >
-				<td style="vertical-align:middle;"><%= g.id %></td>
-				<td style="vertical-align:middle;"><%= g.shape %></td>
-				<td style="vertical-align:middle;"><%= g.size %></td>
-				<td style="vertical-align:middle;"><%= g.description %></td>
-				<td style="vertical-align:middle;"><%= g.colortone %></td>
-				<td style="vertical-align:middle;"><%= g.gemtype %></td>
-				<td style="vertical-align:middle;"><%= g.brand %></td>
-				<td style="vertical-align:middle;text-align: right;"><%= g.price %></td>
-				<td style="vertical-align:middle;text-align: center;"><%= link_to '<button type="button" class="btn btn-warning btn-sm">Edit</button>'.html_safe, edit_admgemstone_path(g) %></td>
-				<td style="vertical-align:middle;"><%= link_to '<button type="button" class="btn btn-danger btn-sm">Delete</button>'.html_safe, admgemstone_path(g), method: :delete, data: {confirm: "Are you sure?"} %></td>
+				<td><%= g.id %></td>
+				<td><%= g.shape %></td>
+				<td><%= g.size %></td>
+				<td><%= g.description %></td>
+				<td><%= g.colortone %></td>
+				<td><%= g.gemtype %></td>
+				<td><%= g.brand %></td>
+				<td><%= number_to_currency g.price %></td>
+				<td><%= link_to 'Edit', edit_admgemstone_path(g), class: 'btn btn-warning btn-sm' %></td>
+				<td><%= link_to 'Delete', admgemstone_path(g), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger btn-sm' %></td>
 			<tr>
 		<% end %>
 	</tbody>

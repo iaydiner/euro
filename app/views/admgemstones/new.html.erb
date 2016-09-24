@@ -9,41 +9,6 @@
 </ul>
 <% end %>
 
-<%= form_for @admgemstone do |f| %>
-	<p>
-		<%= f.label :shape %><br>
-		<%= f.text_field :shape %>
-	</p>
-	<p>
-		<%= f.label :size %><br>
-		<%= f.text_field :size %>
-	</p>
-	<p>
-		<%= f.label :description %>
-		<br>
-		<%= f.text_field :description %>
-	</p>
-	<p>
-		<%= f.label :colortone %><br>
-		<%= f.text_field :colortone %>
-	</p>
-	<p>
-		<%= f.label :gemtype, 'Type' %>
-		<br>
-		<%= f.text_field :gemtype %>
-	</p>
-		<p>
-		<%= f.label :brand %><br>
-		<%= f.text_field :brand %>
-	</p>
-	<p>
-		<%= f.label :price %><br>
-		<%= f.text_field :price %>
-	</p>
-	<p>
-		<%= f.submit "Create Gemstone"%>
-	</p>
-
-<% end %>
+<%= render 'form', gemstone: @admgemstone, update: false -%>
 
 <%= link_to "Back to Gemstone listing", admgemstones_path %>
