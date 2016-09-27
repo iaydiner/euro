@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-
+	has_scope :shape, type: :array
 	def home
 	end
 
@@ -11,7 +11,8 @@ class WelcomeController < ApplicationController
 	end
 
 	def gemstone
-		@admgemstonesall=Admgemstone.all
+		@admgemstonesall = apply_scopes(Admgemstone).all
+		##@admgemstonesall=Admgemstone.all
 		##@admgemstonesall=Admgemstone.where(shape: 'Round').load
 		##@admgemstonesall=Admgemstone.where(shape: ["Round","Square","Trillium","Marquis","Pear"]).load
 		render "welcome/gemstone"
