@@ -17,6 +17,13 @@ class WelcomeController < ApplicationController
 		##@admgemstonesall=Admgemstone.all
 		##@admgemstonesall=Admgemstone.where(shape: 'Round').load
 		##@admgemstonesall=Admgemstone.where(shape: ["Round","Square","Trillium","Marquis","Pear"]).load
-		render "welcome/gemstone"
+		##Rails.logger.debug params.inspect
+		if params.inspect =='{"controller"=>"welcome", "action"=>"gemstone"}'
+			render "welcome/gemstonenodata"
+			##render :js => "alert('gemstonenodata');"
+		else
+			render "welcome/gemstone"
+			##render :js => "alert('gemstone');"
+		end
 	end
 end

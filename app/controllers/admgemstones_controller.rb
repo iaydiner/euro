@@ -6,6 +6,11 @@ class AdmgemstonesController < ApplicationController
 	has_scope :stone, type: :array
 	def index
 		@admgemstonesall = apply_scopes(Admgemstone).all
+		if params.inspect =='{"controller"=>"admgemstones", "action"=>"index"}'
+			render "admgemstones/indexnodata"
+		else
+			render "admgemstones/index"
+		end
 	end
 
 	def new

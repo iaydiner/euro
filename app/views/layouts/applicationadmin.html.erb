@@ -14,17 +14,11 @@
   <![endif]-->
 </head>
 <body>
-<div class="container-fluid">
- <div class="row">
-  <div class="col-xs-12 col-lg-12 page-header" style="background-color: red;border:1px solid red;color:white;">
-  <p>
-    <h1>European Design Web Administration</h1>
-  </p>
-  </div>
- </div>
+<div class="container-fluid" style="padding:0;">
+<div class="well well-lg" style="background-color: red;color: #fff;margin-bottom:2rem;padding:1rem;font-size:3rem;">European Design Web Administration</div>
  <div class="row">
   <div class="col-xs-2 col-lg-2" style="background-color: mintcream;border:0px solid;border-radius:10px;padding:0px;">
-  <ul class="nav nav-pills nav-stacked">
+  <ul class="nav nav-pills nav-stacked" style="padding:1rem;">
     <li role="presentation" class="active"><%= link_to 'Administration', admin_path %></li>
     <li role="presentation"><%= link_to 'Gemstones', admgemstones_path %></li>
     <li role="presentation"><a href="#">Diamonds</a></li>

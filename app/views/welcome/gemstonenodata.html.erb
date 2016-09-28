@@ -1,9 +1,10 @@
-<div class="container-fluid">
+<div class="container">
 
-  <h2 style="margin-top:0;"><b>Gem Listings</b></h2>
-
-    <div class="well well-sm" style="background-color: rgb(122, 105, 173);color: #fff;">Gemstone Shapes</div>
-   <form action=''>
+  <h2><b>Gem Listings</b></h2>
+  
+  <p>Please verify gems availability with our store experts:</p>
+  <div class="well well-sm" style="background-color: rgb(122, 105, 173);color: #fff;margin-bottom:1rem;">Gemstone Shapes</div>
+  <form action=''>
       
       <div style="margin-left:3rem;">
           <%- Admgemstone::SHAPES.each do |shape| -%>
@@ -39,43 +40,8 @@
 
 
     <button type='submit' class="btn btn-info" style="float:right;vertical-align:middle;width: 12rem;margin-right:10rem;">Search</button>
-    <br>
+    <br><br>
+    <div class="well well-sm" style="background-color: #90EE90;color: #DC143C;margin-bottom:1rem;clear: right;text-align: center;">To list the selection please press Search button...</div>
   </form>
-  <br>
 
-  <%= link_to 'New Gemstone', new_admgemstone_path, class: 'btn btn-success btn-md' -%>
-
-  <div class="table-responsive" style="clear: right;">
-  <table class="table table-hover table-condensed table-striped">
-  	<thead>
-  		<tr>
-    		<th>ID</th>
-    		<th>Shape</th>
-    		<th>Size</th>
-    		<th>Stone</th>
-    		<th>Color Tone</th>
-    		<th>Type</th>
-    		<th>Brand</th>
-    		<th>Price</th>
-        <th colspan="2"></th>
-  		</tr>
-  	</thead>
-	<tbody>
-		<% @admgemstonesall.each do |g| %>
-			<tr >
-				<td><%= g.id %></td>
-				<td><%= g.shape.gsub(/\_/," ") %></td>
-				<td><%= g.size %></td>
-				<td><%= g.stone %></td>
-				<td><%= g.colortone %></td>
-				<td><%= g.gemtype %></td>
-				<td><%= g.brand %></td>
-				<td><%= number_to_currency g.price %></td>
-				<td><%= link_to 'Edit', edit_admgemstone_path(g), class: 'btn btn-warning btn-sm' %></td>
-				<td><%= link_to 'Delete', admgemstone_path(g), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger btn-sm' %></td>
-			<tr>
-		<% end %>
-	</tbody>
-  </table>
-</div>
-</div>
+  </div>
