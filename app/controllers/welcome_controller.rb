@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
 	has_scope :shape, type: :array
 	has_scope :gemtype, type: :array
+	has_scope :stone, type: :array
 	def home
 	end
 

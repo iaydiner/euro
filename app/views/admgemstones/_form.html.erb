@@ -8,22 +8,20 @@
 		<%= f.text_field :size %>
 	</p>
 	<p>
-		<%= f.label :description %>
-		<br>
-		<%= f.text_field :description %>
+		<%= f.label :stone %><br>
+		<%= f.select :stone, Admgemstone::STONES %>
 	</p>
 	<p>
 		<%= f.label :colortone %><br>
-		<%= f.text_field :colortone %>
+		<%= f.select :colortone, Admgemstone::COLORTONES %>
 	</p>
 	<p>
-		<%= f.label :gemtype, 'Type' %>
-		<br>
+		<%= f.label :gemtype, 'Type' %><br>
 		<%= f.select :gemtype, Admgemstone::GEMTYPES %>
 	</p>
 		<p>
 		<%= f.label :brand %><br>
-		<%= f.text_field :brand %>
+		<%= f.select :brand, Admgemstone::BRANDS %>
 	</p>
 	<p>
 		<%= f.label :price %><br>

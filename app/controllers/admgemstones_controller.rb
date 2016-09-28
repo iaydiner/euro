@@ -3,6 +3,7 @@ class AdmgemstonesController < ApplicationController
 	layout "applicationadmin"
 	has_scope :shape, type: :array
 	has_scope :gemtype, type: :array
+	has_scope :stone, type: :array
 	def index
 		@admgemstonesall = apply_scopes(Admgemstone).all
 	end
@@ -52,6 +53,6 @@ class AdmgemstonesController < ApplicationController
 
 	private
 	 def admgemstone_params
-			params.require(:admgemstone).permit(:shape, :size, :description, :colortone, :gemtype, :brand, :price)
+			params.require(:admgemstone).permit(:shape, :size, :stone, :colortone, :gemtype, :brand, :price)
 	 end
 end

@@ -1,32 +1,41 @@
 <div class="container">
 
-  <h2><b>Gem Listings</b></h2><br>
-  <p>Please verify gems availability with our store experts:</p><br>
-  <div class="well well-sm" style="background-color: rgb(122, 105, 173);color: #fff;">Gemstone Shapes</div>
-  <form action=''>
-<div style="margin-left:3rem;">
-    <%- Admgemstone::SHAPES.each do |shape| -%>
-      <label style="display:inline-block;margin:auto;width:25rem;height:55px;vertical-align:middle;">
-        <%= image_tag "#{shape}.png", :style => "width:50px;height:50px;" %>   
-        <%= check_box_tag 'shape[]', shape, (params[:shape] && params[:shape].include?(shape)) %>
-        <em style="font-size: 1.4rem;"><%= shape.gsub(/\_/," ") %></em>
-        <br>
-      </label>
-    <%- end -%>
-</div>
-    <br>
-    <div class="well well-sm" style="background-color: rgb(122, 105, 173);color: #fff;">Gemstone Type</div>
-<div class="text-center" >
-     <%- Admgemstone::GEMTYPES.each do |gemtype| -%>
-      <label style="display:inline-block;margin:auto;width:25rem;height:55px;vertical-align:middle;">
-        <%= check_box_tag 'gemtype[]', gemtype, (params[:gemtype] && params[:gemtype].include?(gemtype)) %>
-        <em style="font-size: 1.4rem;"><%= gemtype %></em>
-        <br>
-      </label>
-    <%- end -%>
-</div>
+  <h2><b>Gem Listings</b></h2>
+  <p>Please verify gems availability with our store experts:</p>
+  <div class="well well-sm" style="background-color: rgb(122, 105, 173);color: #fff;margin-bottom:1rem;">Gemstone Shapes</div>
+     <form action=''>
+      
+      <div style="margin-left:3rem;">
+          <%- Admgemstone::SHAPES.each do |shape| -%>
+            <label style="display:inline-block;margin:auto;width:25rem;height:55px;vertical-align:middle;">
+              <%= image_tag "#{shape}.png", :style => "width:50px;height:50px;" %>   
+              <%= check_box_tag 'shape[]', shape, (params[:shape] && params[:shape].include?(shape)) %>
+              <em style="font-size: 1.4rem;"><%= shape.gsub(/\_/," ") %></em>
+            </label>
+          <%- end -%>
+      </div>
+ 
+    <div class="well well-sm" style="background-color: rgb(122, 105, 173);color: #fff;margin-bottom:1rem;">Gemstone Type</div>
+    <div class="text-center" >
+         <%- Admgemstone::GEMTYPES.each do |gemtype| -%>
+          <label style="display:inline-block;margin:auto;width:25rem;height:35px;vertical-align:middle;">
+            <%= check_box_tag 'gemtype[]', gemtype, (params[:gemtype] && params[:gemtype].include?(gemtype)) %>
+            <em style="font-size: 1.4rem;"><%= gemtype %></em>
+    
+          </label>
+        <%- end -%>
+    </div>
 
-
+        <div class="well well-sm" style="background-color: rgb(122, 105, 173);color: #fff;margin-bottom:1rem;">Gem Stone</div>
+    <div style="margin-left:3rem;" >
+         <%- Admgemstone::STONES.each do |stone| -%>
+          <label style="display:inline-block;margin:auto;width:15rem;">
+            <%= check_box_tag 'stone[]', stone, (params[:stone] && params[:stone].include?(stone)) %>
+            <em style="font-size: 1.4rem;"><%= stone %></em>
+       
+          </label>
+        <%- end -%>
+    </div>
 
 
     <button type='submit' class="btn btn-info" style="float:right;vertical-align:middle;width: 12rem;margin-right:10rem;">Filter</button>
@@ -41,7 +50,7 @@
 		<th>ID</th>
 		<th>Shape</th>
 		<th>Size</th>
-		<th>Description</th>
+		<th>Stone</th>
 		<th>Color Tone</th>
 		<th>Type</th>
 		<th>Brand</th>		
@@ -54,7 +63,7 @@
 				<td style="vertical-align:middle;"><%= g.id %></td>
 				<td style="vertical-align:middle;"><%= g.shape.gsub(/\_/," ") %></td>
 				<td style="vertical-align:middle;"><%= g.size %></td>
-				<td style="vertical-align:middle;"><%= g.description %></td>
+				<td style="vertical-align:middle;"><%= g.stone %></td>
 				<td style="vertical-align:middle;"><%= g.colortone %></td>
 				<td style="vertical-align:middle;"><%= g.gemtype %></td>
 				<td style="vertical-align:middle;"><%= g.brand %></td>

@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160916214221) do
+ActiveRecord::Schema.define(version: 20160927193925) do
 
   create_table "gemstones", force: :cascade do |t|
     t.string  "shape"
     t.string  "size"
-    t.string  "description"
+    t.string  "stone"
     t.string  "colortone"
-    t.decimal "price",       precision: 10, scale: 2
+    t.decimal "price",     precision: 10, scale: 2
     t.string  "gemtype"
     t.string  "brand"
   end
