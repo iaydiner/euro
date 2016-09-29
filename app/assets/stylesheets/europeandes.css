@@ -6,6 +6,25 @@ European Design Custom style
 body{
 margin:0px;
 }
+/*admgemstone specific css - pagination */
+#admgemstone > .gemstone-pag > div {
+	margin:0px;
+}
+
+#admgemstone > .gemstone-pag > div > ul {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+/*gemstone specific css - pagination */
+#gemstone > .gemstone-pag > div {
+	margin:0px;
+}
+
+#gemstone > .gemstone-pag > div > ul {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
 /* Multi-Column CSS Menu */
 ul.multicolumn {
 	width: 33rem;

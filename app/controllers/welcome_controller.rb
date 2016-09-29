@@ -13,7 +13,8 @@ class WelcomeController < ApplicationController
 	end
 
 	def gemstone
-		@admgemstonesall = apply_scopes(Admgemstone).all
+		@admgemstonesall = apply_scopes(Admgemstone).paginate(:page => params[:page], :per_page => 10)
+		##@admgemstonesall = apply_scopes(Admgemstone).all
 		##@admgemstonesall=Admgemstone.all
 		##@admgemstonesall=Admgemstone.where(shape: 'Round').load
 		##@admgemstonesall=Admgemstone.where(shape: ["Round","Square","Trillium","Marquis","Pear"]).load

@@ -1,4 +1,4 @@
-<div class="container">
+<div id="gemstone" class="container">
 
   <h2><b>Gem Listings</b></h2>
   
@@ -42,36 +42,43 @@
     <button type='submit' class="btn btn-info" style="float:right;vertical-align:middle;width: 12rem;margin-right:10rem;">Search</button>
     <br>
   </form>
-  <br><br>
+  <br>
+  <div class="gemstone-pag" align="center">
+    <%= will_paginate @admgemstonesall %>
+  </div>
 
   <div class="table-responsive" style="clear: right;">
   <table class="table table-hover ">
-  	<thead>
-		<tr>
-		<th>ID</th>
-		<th>Shape</th>
-		<th>Size</th>
-		<th>Stone</th>
-		<th>Color Tone</th>
-		<th>Type</th>
-		<th>Brand</th>		
-		<th style="text-align: right;">Price</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @admgemstonesall.each do |g| %>
-			<tr>
-				<td style="vertical-align:middle;"><%= g.id %></td>
-				<td style="vertical-align:middle;"><%= g.shape.gsub(/\_/," ") %></td>
-				<td style="vertical-align:middle;"><%= g.size %></td>
-				<td style="vertical-align:middle;"><%= g.stone %></td>
-				<td style="vertical-align:middle;"><%= g.colortone %></td>
-				<td style="vertical-align:middle;"><%= g.gemtype %></td>
-				<td style="vertical-align:middle;"><%= g.brand %></td>
-				<td style="vertical-align:middle;text-align: right;"><%= g.price %></td>
-			<tr>
-		<% end %>
-	</tbody>
+    <thead>
+  		<tr>
+  		<th>ID</th>
+  		<th>Shape</th>
+  		<th>Size</th>
+  		<th>Stone</th>
+  		<th>Color Tone</th>
+  		<th>Type</th>
+  		<th>Brand</th>		
+  		<th style="text-align: right;">Price</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<% @admgemstonesall.each do |g| %>
+  			<tr>
+  				<td style="vertical-align:middle;"><%= g.id %></td>
+  				<td style="vertical-align:middle;"><%= g.shape.gsub(/\_/," ") %></td>
+  				<td style="vertical-align:middle;"><%= g.size %></td>
+  				<td style="vertical-align:middle;"><%= g.stone %></td>
+  				<td style="vertical-align:middle;"><%= g.colortone %></td>
+  				<td style="vertical-align:middle;"><%= g.gemtype %></td>
+  				<td style="vertical-align:middle;"><%= g.brand %></td>
+  				<td style="vertical-align:middle;text-align: right;"><%= number_to_currency g.price %></td>
+  			<tr>
+  		<% end %>
+  	 </tbody>
   </table>
 </div>
+  <div class="gemstone-pag" align="center">
+    <%= will_paginate @admgemstonesall %>
+  </div>
+
 </div>

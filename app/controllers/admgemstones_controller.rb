@@ -5,7 +5,7 @@ class AdmgemstonesController < ApplicationController
 	has_scope :gemtype, type: :array
 	has_scope :stone, type: :array
 	def index
-		@admgemstonesall = apply_scopes(Admgemstone).all
+		@admgemstonesall = apply_scopes(Admgemstone).paginate(:page => params[:page], :per_page => 10)
 		if params.inspect =='{"controller"=>"admgemstones", "action"=>"index"}'
 			render "admgemstones/indexnodata"
 		else
