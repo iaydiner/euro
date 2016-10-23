@@ -11,10 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
+//  require jquery.turbolinks.js
+//= require bootstrap-sprockets
+//  require turbolinks
 //= require main
-//= modernizr
-//= doubletaptogo.min.js
+//= require modernizr
+//  doubletaptogo.min.js
 //= require_tree .
