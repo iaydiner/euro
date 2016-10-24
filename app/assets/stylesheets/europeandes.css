@@ -5,6 +5,7 @@ European Design Custom style
 -------------------------------- */
 body{
 margin:0px;
+background-color:#fff;
 }
 /*admgemstone specific css - pagination */
 #admgemstone > .gemstone-pag > div {
@@ -53,6 +54,7 @@ ul.multicolumn li a {
 
 
 .text2rem { font-size:1.5rem;}
+#nav {z-index:100;}
 #nav ul li a.spline2 {font-size: 1.4rem;}
 #nav ul li a.spline2l {line-height: 1.4rem;}
 #nav ul li td em {text-align: right;}
@@ -243,6 +245,11 @@ ul.multicolumn {
 html {
 font-size: 75%;
 }
+#products .thumbnail
+{
+	margin-bottom: 1rem;
+}
+		
 .cd-hero {display:none;}
 #nav ul li a.spline2 {line-height: 3.75rem;font-size:1.4rem;}
 #nav #skipbr {display:none;}
@@ -328,3 +335,220 @@ margin: 1px;
 float:right;
 z-index: 7;
 }
+
+/*CONTENT-TOOLS*/
+#content-tools {
+	padding:0;
+}
+/* SIDEBAR */
+	.grad1 {
+		background: red; /* For browsers that do not support gradients */
+		background: linear-gradient(to left, rgba(51,51,51,0), rgba(51,51,51,1));
+	}
+
+#content-tools 	 .accordion {
+	  /*width: 220px;*/
+	  margin:0;
+	  padding:0;
+	  background-colorx: #63f;
+	}
+#content-tools 	.accordion h1, h2, h3, h4 {
+	  cursor: pointer;
+	  margin:0!important;
+	}
+#content-tools 	 .accordion h2, h3, h4 {
+	  font-familyx: "News Cycle";
+	}
+#content-tools 	 .accordion h1:first-child {
+		margin-topx:2rem;	
+		padding-top:1.5rem;
+	}
+#content-tools 	 .accordion h1 {
+	  padding: 8px 20px;
+	  background-color: #333;
+	  /*font-family: Lobster;*/
+	  font-size: 16px;
+	  font-weight: normal;
+	  color: #9D9D9D;/*#1abc9c;*/
+	}
+#content-tools 	 .accordion h1:hover {
+	  color: #fff;	/*#FFD700; #4afcdc;*/
+	  background-color: #555;
+	  border-style:solid;
+	  border-width:5px;	
+	  border-color:transparent;
+	  border-left-color:red;
+	}
+	
+	/*.accordion h1:first-child {
+	  border-radius: 10px 10px 0 0;
+	}
+	.accordion h1:last-of-type {
+	  border-radius: 0 0 10px 10px;
+	}
+	.accordion h1:not(:last-of-type) {
+	  border-bottom: 1px dotted #1abc9c;
+	}
+	*/
+#content-tools 	 .accordion div, .accordion p {
+	  display: none;
+	}
+#content-tools 	 .accordion h2 {
+	  padding: 5px 25px;
+	  background-color: #8b7d6b;
+	  font-size: 15px;
+	  color: #DDDDDD;
+	  
+	}
+#content-tools 	 .accordion h2:hover {
+	  background-color: #7a6c5a;
+	  color: #fff;
+	  font-weight: bold;
+	  border-style:solid;
+	  border-width:5px;	
+	  border-color:transparent;
+	  border-left-color:red;
+	}
+#content-tools 	 .accordion h3 {
+	  padding: 5px 33px;
+	  background-color: #ffe4c4;
+	  font-size: 14px;
+	  color: #2D2D2D; 
+	}
+#content-tools 	 .accordion h3:hover {
+	  background-color: #eed3b3;
+	  color: #000;
+	  font-weight: bold;
+	  border-style:solid;
+	  border-width:5px;	
+	  border-color:transparent;
+	  border-left-color:red;
+	}
+#content-tools 	 .accordion h4 {
+	  padding: 5px 35px;
+	  background-color: #ffc25a;
+	  font-size: 12px;
+	  color: #af720a; 
+	}
+#content-tools 	 .accordion h4:hover {
+	  background-color: #e0b040;
+	}
+
+#content-tools 	 .accordion .opened-for-codepen {
+	  display: block;
+	}
+	
+#content-tools 	 .accordion p {
+	  padding: 15px 35px;
+	  background-color: #ddd;
+	  font-family: "Georgia";
+	  font-size: .8rem;
+	  color: #333;
+	  line-height: 12px;
+	  margin-bottom:0;
+	  display:none;
+	}
+#content-tools .navbar-collapse {
+	padding-left:0;
+	padding-right:0;
+	}
+/* BANNERS */ 
+#banner001 .thumbnail {
+	border-color: transparent;
+	margin-left:3rem;
+	margin-right:3rem;
+	margin-top: 3rem;
+	width=100%;
+	padding:0;
+}
+/* PRODUCT LEVEL1 THUMBS */ 
+		#products {
+		margin-top:3rem;
+		}
+		
+		#products .item{
+		padding:0;
+		}
+	
+		#products .thumbnail
+		{
+			margin-bottom: 4rem;
+			margin-left:3rem;
+			margin-right:3rem;
+			padding: 0px;
+			-webkit-border-radius: 0px;
+			-moz-border-radius: 0px;
+			border-radius: 0px;
+			background-color:#f2f2f2; /* !important;*/
+		}
+		
+		#products .thumbnail img {
+			max-height: 100%;
+			max-width: 100%;
+		}
+		#products .thumbnail:hover
+		{
+			background: #428bca;
+			color: #fff!important;
+			font-weight: bold;
+		}
+
+		#products .item .grid-group-item-heading
+		{
+			float: none;
+			width: 100%;
+			background-colorx: #fff;
+			margin-bottom: 10px;
+		}
+		#products .item .grid-group-item-heading:nth-of-type(odd):hover, .item.grid-group-item-heading:hover
+		{
+			backgroundx: #428bca;
+		}
+
+		#products .item .thumbnail .list-group-image
+		{
+			marginx: 1px;
+		}
+		
+		#products .item .grid-group-item-heading .list-group-image
+		{
+			margin-right: 10px;
+		}
+		#products .item .grid-group-item-heading .thumbnail
+		{
+			margin-bottom: 0px;
+		}
+		#products .thumbnail .caption
+		{
+			border-radius: 1px;
+			/*background-color: #F0F0F0;*/
+			padding: 3px 3px 3px 3px;
+			color: inherit;
+		}
+		#products .grid-group-item-heading
+		{	
+			padding: 1px 1px 1px 1px;
+		}
+		#products .item .grid-group-item-heading:nth-of-type(odd)
+		{
+			backgroundx: #eeeeee;
+		}
+
+		#products .item .grid-group-item-heading:before, .item.grid-group-item-heading:after
+		{
+			display: table;
+			content: " ";
+		}
+
+		#products .item .grid-group-item-heading img
+		{
+			float: left;
+		}
+		#products .item .grid-group-item-heading:after
+		{
+			clear: both;
+		}
+		#products .grid-group-item-heading-text
+		{
+			margin: 0 0 11px;
+		}

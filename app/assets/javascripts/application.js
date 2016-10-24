@@ -17,5 +17,5 @@
 //  require turbolinks
 //= require main
 //= require modernizr
-//  doubletaptogo.min.js
+//  doubletaptogo.min
 //= require_tree .

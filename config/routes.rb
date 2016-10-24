@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   ## Navigation Header - Gemstone
   get 'gemstones', to:'welcome#gemstone'
 
+  ## Navigation Header - Gemstone
+  get 'tools', to:'tools#toolshome'
+
   ##below line adds many routes automaticly
   resources :admgemstones
   # Example of regular route:
