@@ -337,6 +337,9 @@ z-index: 7;
 }
 
 /*CONTENT-TOOLS*/
+#content-tools h4 {
+	font-size:1.4rem;
+}
 #content-tools {
 	padding:0;
 }
