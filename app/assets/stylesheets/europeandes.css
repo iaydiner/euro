@@ -455,8 +455,6 @@ z-index: 7;
 /* BANNERS */ 
 #banner001 .thumbnail {
 	border-color: transparent;
-	margin-left:3rem;
-	margin-right:3rem;
 	margin-top: 3rem;
 	width:100%;
 	padding:0;
