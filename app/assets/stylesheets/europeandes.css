@@ -553,3 +553,59 @@ z-index: 7;
 		{
 			margin: 0 0 11px;
 		}
+
+/* Finished Jewelry Sidebar */ 
+#sidebar-fj, #sidebar-fj > #fj-filter, #sidebar-fj > #fj-filter > div {
+	padding:0;
+}
+
+#sidebar-fj ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #555;
+    height: 100%;
+}
+
+#sidebar-fj li {
+    display: block;
+    color: #f0ffff;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#sidebar-fj li.active {
+    background-color: #f1f1f1;
+    color: white;
+}
+
+#sidebar-fj li:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+#sidebar-fj .checkboxily {
+padding-top:0px;
+}
+
+#sidebar-fj .checkboxily label[for*="c"]
+{
+    position:relative;
+    top: 10px;
+	display:block;
+	padding:0.7rem;
+}
+
+#sidebar-fj .checkboxily {
+	padding:0 1rem 1rem 1rem;
+}
+
+#sidebar-fj li p {
+width:100%;
+border-bottom-width:0.2rem;
+border-style:solid;
+border-color:red;
+background-color: yellow;
+margin-top:0.5rem;
+margin-bottom:0.3rem;
+}
