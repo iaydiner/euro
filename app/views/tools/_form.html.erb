@@ -1,0 +1,6 @@
+<%=  simple_form_for @tool do |f| %>
+<%=  f.input :title, label: "Tool Name" %>
+<%=  f.input :short_desc, label: "Short Description" %>
+<%=  f.input :long_desc, label: "Long Description" %>
+<%=  f.button :submit, label: "Save" %>
+<% end %>

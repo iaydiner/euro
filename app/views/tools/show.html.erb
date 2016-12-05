@@ -1,0 +1,6 @@
+<h3>Title : <%= @tool.title %></h3>
+<h3>Short Description : <%= @tool.short_desc %></h3>
+<h3>Long Description : <%= @tool.long_desc %></h3>
+<%= link_to "Back", tools_path %>
+<%= link_to "Edit", edit_tool_path %>
+<%= link_to "Delete", tool_path(@tool), method: :delete, data: { confirm: "Are you sure?"} %>

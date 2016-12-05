@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   get 'gemstones', to:'welcome#gemstone'
 
   ## Navigation Header - Tools
-  get 'tools', to:'tools#toolshome'
+  #get 'tools', to:'tools#toolshome'
+  get 'tools', to:'tools#index'
+  resources :tools
 
   ## Navigation Header - Finished Jewelry
   get 'finishedjewelry', to:'finishedjewelry#finishedjewelryhome'
