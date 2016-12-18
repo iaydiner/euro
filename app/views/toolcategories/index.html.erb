@@ -1,8 +1,36 @@
 
-<%  @toolcategories.each do |tool| %>
-	<h4><%= tool.level1 %>=><%= tool.level2 %>=><%= tool.level3 %></h4>
-<% end %>
-	
-	<% if current_user.try(:admin?) %>
-	<%= link_to "Add Tool Category", new_toolcategory_path %>
+<div class="table-responsive" style="clear: right;">
+  <table class="table table-hover table-condensed table-striped">
+  	<thead>
+  		<tr>
+    		<th>ID</th>
+    		<th>Main Category</th>
+    		<th>Sub Category</th>
+    		<th>Sub2 Category</th>
+        <th colspan="2"></th>
+  		</tr>
+  	</thead>
+	<tbody>
+	<%  @toolcategories.each do |toolcategory| %>
+	<tr>
+			<td><%= toolcategory.id %></td>
+			<td><%= toolcategory.level1 %></td>
+			<td><%= toolcategory.level2 %></td>
+			<td><%= toolcategory.level3 %></td>
+		<td><%= link_to "Edit", edit_toolcategory_path(toolcategory), class: 'btn btn-warning btn-sm' %></td>
+		<td><%= link_to "Delete", toolcategory_path(toolcategory), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger btn-sm' %></td>
+	</tr>
 	<% end %>
+	</tbody>
+  </table>
+</div>
+	
+	
+	<%= link_to "Add Tool Category", new_toolcategory_path, class: 'btn btn-success btn-md' %>
+	<% if current_user.try(:admin?) %>
+	<h3>Admin User Entered to This page</h3>
+	<% end %>
+
+
+
+				
