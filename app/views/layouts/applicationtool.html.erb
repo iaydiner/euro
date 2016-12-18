@@ -15,12 +15,15 @@
 </head>
 <body>
     <%= render 'layouts/headermenu' %>
+    <!-- BEGIN CONTENT -->
+    <div id="content-tools" class="container-fluid"> 
     <%= render 'layouts/sidebartool' %>
     <!--
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     -->
     <%= yield %>
+    </div>
 <script>
 var headers = ["H1","H2","H3","H4","H5","H6"];
 

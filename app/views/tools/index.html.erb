@@ -7,10 +7,27 @@
 			</div>
 		<div>
 
-<%  if not(params[:tcat1].blank?) %>
+			<div id="products" class="row">
+	<%  if not(params[:tcat1].blank?) %>
 		<%  @tools.each do |tool| %>
-			<a href="/tools/<%= tool.id %>"><%= image_tag tool.tool_img.url(:tool_index) %></a>
 			<!-- <h2> <%=  link_to tool.title, tool_path(tool) %></h2> -->
+				
+				<div class="item  col-xs-12 col-lg-3">
+					<a href="/tools/<%= tool.id %>">
+						<div class="thumbnail">
+						<%= image_tag tool.tool_img.url(:tool_index), :class => "group list-group-image" %> 
+						<div class="caption">
+							<h4 class="group inner grid-group-item-heading">
+								Earring - SKU 01223448</h4>
+							<h4 class="group inner grid-group-item-heading">
+								<%= tool.title %></h4>
+							<h4 class="group inner grid-group-item-heading">
+								<%= tool.short_desc %></h4>
+						</div>
+					</div>
+					</a>
+				</div>
+
 		<% end %>
 			<% if current_user.try(:admin?) %>
 			<%= link_to "Add Tool", new_tool_path %>
@@ -333,7 +350,7 @@
 			</div>
 	</div>
 </div>
-</div>
-<% end %>
 
+<% end %>
+</div>
 </div>
