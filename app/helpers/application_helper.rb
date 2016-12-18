@@ -17,6 +17,8 @@ module ApplicationHelper
 		else			
 			filepath = asset_path(path)
 			filepath_without_extension=File.join(File.dirname(filepath), File.basename(filepath, '.*'))
+		end
 	end
-	end
+
+	
 end

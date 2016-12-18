@@ -25,13 +25,18 @@
     <li role="presentation"><a href="#">Finished Jewelry</a></li>
     <li role="presentation"><a href="#">Findings</a></li>
     <li role="presentation"><a href="#">Equipment</a></li>
-    <li role="presentation"><a href="#">Tools</a></li>
+    <li role="presentation"><%= link_to 'Tool Category', new_toolcategory_path %></li>
     <li role="presentation"><a href="#">Users</a></li>
     <li role="presentation"><%= link_to 'Client Home Page', root_path %></li>
   </ul>
   </div>
   <div class="col-xs-10 col-lg-10">
 
+
+    <!--
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    -->
      <%= yield %>
 
   </div>
