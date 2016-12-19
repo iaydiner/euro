@@ -28,25 +28,65 @@
 		<h2><span class="label label-primary"><%= @tool.title %></span></h2><br>
 		
 		<h3><span class="xxxxxxxxxxxx"><%= @tool.short_desc %></span></h3><br>
-		<h3>No:<span class="monospaced"> 123-ASR-7647635</span></h3><br>
+		<h3>No:<span class="monospaced"><%= @tool.sku %></span></h3><br>
 
 		<% if user_signed_in? %>
-		<h3>Price:<span class="monospaced"> $236.79</span></h3><br>
+		<h3>Price:<span class="monospaced"> $<%= @tool.price %></span></h3><br>
 		<% end %>
 
 		<p><span class="description"><%= @tool.long_desc %></span></p><br>
 		<h3><u>Specifications</u></h3><br>
-		<h4> Brand Name:	Anxerre</h4>
-		<h4> Weight:	10kg</h4>
-		<h4> Height:	120mm</h4>
-		<h4> Width:		20mm</h4>
-		<h4> Color:		Purple</h4>
-		<h4> Metal:		Copper</h4>
-		<h4> WHATT:		2000</h4>
-		<h4> Measuring Range:		10-200mm</h4>
-		<h4> Battery:		2x3v</h4>
-		<h4> Used With:		Amex 2 Alloy</h4>
-		<h4> Depth:		30cm</h4><br>
+		
+		<% if @tool.brand? %>
+			<div class="col-xs-6"><h4> Brand Name:</h4></div>
+			<div class="col-xs-6"><h4><%= @tool.brand %></h4></div>
+		<% end %>
+
+		<% if @tool.weight? %>
+			<div class="col-xs-6"><h4> Weight:</h4></div>
+			<div class="col-xs-6"><h4><%= @tool.weight %></h4></div>
+		<% end %>
+		<% if @tool.height? %>
+			<div class="col-xs-6"><h4> Height:</h4></div>
+			<div class="col-xs-6"><h4><%= @tool.height %></h4></div>
+		<% end %>
+
+		<% if @tool.width? %>
+			<div class="col-xs-6"><h4> Width:</h4></div>
+			<div class="col-xs-6"><h4><%= @tool.width %></h4></div>
+		<% end %>
+		<% if @tool.color? %>
+			<div class="col-xs-6"><h4> Color:</h4></div>
+			<div class="col-xs-6"><h4><%= @tool.color %></h4></div>
+		<% end %>
+
+		<% if @tool.metal? %>
+			<div class="col-xs-6"><h4> Metal:</h4></div>
+			<div class="col-xs-6"><h4><%= @tool.metal %></h4></div>
+		<% end %>
+		<% if @tool.whatt? %>
+			<div class="col-xs-6"><h4> Whatt:</h4></div>
+			<div class="col-xs-6"><h4><%= @tool.whatt %></h4></div>
+		<% end %>
+
+		<% if @tool.measuringrange? %>
+			<div class="col-xs-6"><h4> Measuring Range:</h4></div>
+			<div class="col-xs-6"><h4><%= @tool.measuringrange %></h4></div>
+		<% end %>
+		<% if @tool.battery? %>
+			<div class="col-xs-6"><h4> Battery:</h4></div>
+			<div class="col-xs-6"><h4><%= @tool.battery %></h4></div>
+		<% end %>
+		<% if @tool.usedwith? %>
+			<div class="col-xs-6"><h4> Used With:</h4></div>
+			<div class="col-xs-6"><h4><%= @tool.usedwith %></h4></div>
+		<% end %>
+
+		<% if @tool.depth? %>
+			<div class="col-xs-6"><h4> Depth:</h4></div>
+			<div class="col-xs-6"><h4><%= @tool.depth %></h4></div>
+		<% end %>
+
 		<p>To order <a href="tel:18005551212">please call 1-800-555-1212</a></p>
 	</div>
 

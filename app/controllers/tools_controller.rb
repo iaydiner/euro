@@ -1,6 +1,6 @@
 class ToolsController < ApplicationController
 	before_action :find_tool, only: [:edit, :update, :show, :destroy]
-
+	before_action :just_admin, only: [:new,:create,:edit, :update, :destroy]
 	#def toolshome
 	#	render :layout => "applicationtool"
 	#end
@@ -64,11 +64,21 @@ class ToolsController < ApplicationController
 
 	private
 	def tool_params
-		params.require(:tool).permit(:title, :short_desc, :long_desc, :toolcategory_id, :tool_img)
+		params.require(:tool).permit(:title, :short_desc, :long_desc, :toolcategory_id, :tool_img, :sku, :price, :brand, :weight, :height, :width, :color, :metal, :whatt, :measuringrange, :battery, :usedwith,:depth)
 	end
 
 	def find_tool
 		@tool=Tool.find(params[:id])
+	end
+
+	def just_admin
+  		authenticate_user!
+
+	  if current_user.email=="info@europeandesign.ca"
+	     return
+	  else
+	     redirect_to root_path # or whatever
+	  end
 	end
 
 

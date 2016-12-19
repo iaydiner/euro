@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+	before_action :just_admin, only: [:admin]
 	has_scope :shape, type: :array
 	has_scope :gemtype, type: :array
 	has_scope :stone, type: :array
@@ -26,5 +27,15 @@ class WelcomeController < ApplicationController
 			render "welcome/gemstone"
 			##render :js => "alert('gemstone');"
 		end
+	end
+	private
+	def just_admin
+  		authenticate_user!
+
+	  if current_user.email=="info@europeandesign.ca"
+	     return
+	  else
+	     redirect_to root_path # or whatever
+	  end
 	end
 end

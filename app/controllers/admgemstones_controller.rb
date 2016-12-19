@@ -1,4 +1,5 @@
 class AdmgemstonesController < ApplicationController
+before_action :just_admin, only: [:new,:create,:edit, :update, :destroy, :index, :show]
 
 	layout "applicationadmin"
 	has_scope :shape, type: :array
@@ -60,4 +61,14 @@ class AdmgemstonesController < ApplicationController
 	 def admgemstone_params
 			params.require(:admgemstone).permit(:shape, :size, :stone, :colortone, :gemtype, :brand, :price)
 	 end
+
+	 def just_admin
+  		authenticate_user!
+
+	  if current_user.email=="info@europeandesign.ca"
+	     return
+	  else
+	     redirect_to root_path # or whatever
+	  end
+	end
 end

@@ -1,8 +1,22 @@
 <%=  simple_form_for @tool, :html => { :multipart => true } do |f| %>
 <%=  select_tag(:toolcategory_id, options_for_select(@toolcategories), :prompt => "Select Category") %>
 <%=  f.file_field :tool_img %>
+<%=  f.input :sku, label: "SKU" %>
 <%=  f.input :title, label: "Tool Name" %>
 <%=  f.input :short_desc, label: "Short Description" %>
 <%=  f.input :long_desc, label: "Long Description" %>
+<%=  f.input :price, label: "Price" %>
+<%=  f.input :brand, label: "Brand Name" %>
+<%=  f.input :weight, label: "Weight" %>
+<%=  f.input :height, label: "Height" %>
+<%=  f.input :width, label: "Width" %>
+<%=  f.input :color, label: "Color" %>
+<%=  f.input :metal, label: "Metal" %>
+<%=  f.input :whatt, label: "WHATT" %>
+<%=  f.input :measuringrange, label: "Measuring Range" %>
+<%=  f.input :battery, label: "Battery" %>
+<%=  f.input :usedwith, label: "Used With" %>
+<%=  f.input :depth, label: "Depth" %>
+
 <%=  f.button :submit, label: "Save" %>
 <% end %>
