@@ -1,5 +1,6 @@
-<h2>Edit Tool</h2>
-<!--<%= render "form" %>-->
+
+<div class="col-xs-12 col-sm-10 col-lg-10">
+	<h2>Edit Tool</h2>
 <%=  simple_form_for @tool, :html => { :multipart => true } do |f| %>
 <%=  f.select :toolcategory_id, @toolcategories %>
 <%=  f.file_field :tool_img %>
@@ -21,3 +22,4 @@
 <%=  f.input :depth, label: "Depth" %>
 <%=  f.button :submit, label: "Save" %>
 <% end %>
+</div>
