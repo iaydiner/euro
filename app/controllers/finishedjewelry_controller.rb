@@ -1,6 +1,6 @@
 class FinishedjewelryController < ApplicationController
 	
-	def finishedjewelryhome
+	def index
 		render :layout => "applicationfinishedjewelry"
 	end
 

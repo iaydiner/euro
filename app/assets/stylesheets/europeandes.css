@@ -595,16 +595,16 @@ z-index: 7;
 padding-top:0px;
 }
 
-#sidebar-fj .checkboxily label[for*="c"]
+#sidebar-fj .checkboxily label[for*="f"]
 {
     position:relative;
-    top: 10px;
+    top: 1px;
 	display:block;
-	padding:0.7rem;
+	padding:0.2rem;
 }
 
 #sidebar-fj .checkboxily {
-	padding:0 1rem 1rem 1rem;
+	padding:0 0 1rem 1rem;
 }
 
 #sidebar-fj li p {

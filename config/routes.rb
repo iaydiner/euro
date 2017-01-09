@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   resources :toolcategories
 
   ## Navigation Header - Finished Jewelry
-  get 'finishedjewelry', to:'finishedjewelry#finishedjewelryhome'
+  get 'finishedjewelry', to:'finishedjewelry#index'
 
   ## Navigation Header - Findings
   get 'findings', to:'findings#findingshome'
