@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161218230012) do
+ActiveRecord::Schema.define(version: 20170119012622) do
 
   create_table "gemstones", force: :cascade do |t|
     t.string  "shape"
@@ -35,15 +35,15 @@ ActiveRecord::Schema.define(version: 20161218230012) do
     t.string   "title"
     t.text     "short_desc"
     t.text     "long_desc"
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
     t.integer  "toolcategory_id"
     t.string   "tool_img_file_name"
     t.string   "tool_img_content_type"
     t.integer  "tool_img_file_size"
     t.datetime "tool_img_updated_at"
     t.string   "sku"
-    t.decimal  "price",                 precision: 10, scale: 2
+    t.decimal  "price",                  precision: 10, scale: 2
     t.string   "brand"
     t.string   "weight"
     t.string   "height"
@@ -55,6 +55,10 @@ ActiveRecord::Schema.define(version: 20161218230012) do
     t.string   "battery"
     t.string   "usedwith"
     t.string   "depth"
+    t.string   "tool_img2_file_name"
+    t.string   "tool_img2_content_type"
+    t.integer  "tool_img2_file_size"
+    t.datetime "tool_img2_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

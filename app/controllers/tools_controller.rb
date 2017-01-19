@@ -64,7 +64,7 @@ class ToolsController < ApplicationController
 
 	private
 	def tool_params
-		params.require(:tool).permit(:title, :short_desc, :long_desc, :toolcategory_id, :tool_img, :sku, :price, :brand, :weight, :height, :width, :color, :metal, :whatt, :measuringrange, :battery, :usedwith,:depth)
+		params.require(:tool).permit(:title, :short_desc, :long_desc, :toolcategory_id, :tool_img, :tool_img2, :sku, :price, :brand, :weight, :height, :width, :color, :metal, :whatt, :measuringrange, :battery, :usedwith,:depth)
 	end
 
 	def find_tool
