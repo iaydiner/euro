@@ -13,8 +13,13 @@ class ToolsController < ApplicationController
 				@toolcategory_id = Toolcategory.where(level1: params[:tcat1]).ids
 				@tools = Tool.where(:toolcategory_id => @toolcategory_id)
 			else
+				if params[:tcat3].blank?
+				@toolcategory_id = Toolcategory.find_by(level1: params[:tcat1], level2: params[:tcat2]).id	
+				@tools = Tool.where(:toolcategory_id => @toolcategory_id)
+				else
 				@toolcategory_id = Toolcategory.find_by(level1: params[:tcat1], level2: params[:tcat2],level3: params[:tcat3]).id	
 				@tools = Tool.where(:toolcategory_id => @toolcategory_id)
+				end
 			end
 			
 		end
