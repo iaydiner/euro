@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  short_desc: MyText
+  long_desc: MyText
+  sku: MyString
+  price: 9.99
+  jewelry_type: MyString
+  metal: MyString
+  color: MyString
+
+two:
+  title: MyString
+  short_desc: MyText
+  long_desc: MyText
+  sku: MyString
+  price: 9.99
+  jewelry_type: MyString
+  metal: MyString
+  color: MyString

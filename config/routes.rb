@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   #get 'tools', to:'tools#index'
   resources :tools
   resources :toolcategories
+  resources :fjewelries
 
   ## Navigation Header - Finished Jewelry
   get 'finishedjewelry', to:'finishedjewelry#index'

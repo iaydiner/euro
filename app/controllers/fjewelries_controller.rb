@@ -1,0 +1,2 @@
+class FjewelriesController < ApplicationController
+end

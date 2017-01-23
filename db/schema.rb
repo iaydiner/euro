@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119012622) do
+ActiveRecord::Schema.define(version: 20170123014224) do
+
+  create_table "fjewelries", force: :cascade do |t|
+    t.string   "title"
+    t.text     "short_desc"
+    t.text     "long_desc"
+    t.string   "sku"
+    t.decimal  "price",        precision: 10, scale: 2
+    t.string   "jewelry_type"
+    t.string   "metal"
+    t.string   "color"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+  end
 
   create_table "gemstones", force: :cascade do |t|
     t.string  "shape"
