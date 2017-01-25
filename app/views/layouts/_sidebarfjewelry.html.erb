@@ -1,0 +1,58 @@
+<div id="sidebar-fj" class="container-fluid"> 
+<!-- BEGIN SIDEBAR -->
+	<div id="fj-filter" class="col-xs-2 col-lg-2">	
+		 <div class="collapse navbar-collapse">
+			<div>
+				<ul>
+				<li>
+					<h4>Type</h4>
+					<p></p>
+					<div class="checkboxily">
+						<%- Fjewelry::JEWELRY_TYPES.each do |jewelry_type| -%>
+			            <label for="fja1">  
+			              <%= check_box_tag 'jewelry_type[]', jewelry_type, (params[:jewelry_type] && params[:jewelry_type].include?(jewelry_type)) %>
+			              <em style="font-size: 1.4rem;"><%= jewelry_type.gsub(/\_/," ") %></em>
+			            </label>
+         				<%- end -%>	
+					</div>
+				</li>
+				<li>
+					<h4>Metal</h4>
+					<p></p>
+					<div class="checkboxily">
+						<%- Fjewelry::METALS.each do |metal| -%>
+			            <label for="fjb1">  
+			              <%= check_box_tag 'metal[]', metal, (params[:metal] && params[:metal].include?(metal)) %>
+			              <em style="font-size: 1.4rem;"><%= metal.gsub(/\_/," ") %></em>
+			            </label>
+         				<%- end -%>	
+					</div>
+				</li>	
+				<li>
+					<h4>Color</h4>
+					<p></p>
+					<div class="checkboxily">
+						<%- Fjewelry::COLORS.each do |color| -%>
+			            <label for="fjc1">  
+			              <%= check_box_tag 'color[]', color, (params[:color] && params[:color].include?(color)) %>
+			              <em style="font-size: 1.4rem;"><%= color.gsub(/\_/," ") %></em>
+			            </label>
+         				<%- end -%>	
+					</div>
+				</li>	
+				<li>
+					<h4>Stone</h4>
+					<p></p>
+					<div class="checkboxily">
+						<%- Fjewelry::STONES.each do |stone| -%>
+			            <label for="fjd1">  
+			              <%= check_box_tag 'color[]', stone, (params[:stone] && params[:stone].include?(stone)) %>
+			              <em style="font-size: 1.4rem;"><%= stone.gsub(/\_/," ") %></em>
+			            </label>
+         				<%- end -%>	
+					</div>
+				</li>	
+				</ul>
+			</div>
+		</div>
+	</div>

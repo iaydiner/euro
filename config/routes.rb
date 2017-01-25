@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   resources :fjewelries
 
   ## Navigation Header - Finished Jewelry
-  get 'finishedjewelry', to:'finishedjewelry#index'
+  ###get 'finishedjewelry', to:'finishedjewelry#index'
 
   ## Navigation Header - Findings
   get 'findings', to:'findings#findingshome'
