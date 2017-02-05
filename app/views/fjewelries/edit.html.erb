@@ -1,0 +1,12 @@
+<h1> Edit existing Gemstone</h1>
+<% if @fjewelry.errors.any? %>
+<h2 style="color:red;">The following errors prevented the gemstone from getting created</h2>
+<ul>
+	<% @fjewelry.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+</ul>
+<% end %>
+
+<%= render 'form', fjewelry: @fjewelry, update: true -%>
+<%= link_to "Back to Gemstones listing", fjewelries_path %>

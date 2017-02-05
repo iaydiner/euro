@@ -1,0 +1,14 @@
+<h1>Create a Finished Jewelry</h1>
+
+<% if @fjewelry.errors.any? %>
+<h2>The following errors prevented the finished jewelry record from getting created</h2>
+<ul>
+	<% @fjewelry.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+</ul>
+<% end %>
+
+<%= render 'form', fjewelry: @fjewelry, update: false -%>
+
+<%= link_to "Back to finished jewelry listing", fjewelries_path %>

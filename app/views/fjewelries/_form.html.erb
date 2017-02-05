@@ -1,0 +1,46 @@
+<%= form_for fjewelry do |f| %>
+<p>
+	<%=  f.file_field :fjewelry_img %>
+</p>
+	<p>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label :short_desc %><br>
+		<%= f.text_field :short_desc %>
+	</p>
+	<p>
+		<%= f.label :long_desc %><br>
+		<%= f.text_field :long_desc %>
+	</p>
+	<p>
+		<%= f.label :sku, 'SKU' %><br>
+		<%= f.text_field :sku %>
+	</p>
+	<p>
+		<%= f.label :price %><br>
+		<%= f.text_field :price %>
+	</p>
+	<p>
+		<%= f.label :jewelry_type, 'Type' %><br>
+		<%= f.select :jewelry_type, Fjewelry::JEWELRY_TYPES -%>
+	</p>
+	<p>
+		<%= f.label :metal, 'Metal' %><br>
+		<%= f.select :metal, Fjewelry::METALS %>
+	</p>
+	<p>
+		<%= f.label :color, 'Color' %><br>
+		<%= f.select :color, Fjewelry::COLORS %>
+	</p>
+	<p>
+		<%= f.label :stone, 'Stone' %><br>
+		<%= f.select :stone, Fjewelry::STONES %>
+	</p>
+
+	<p>
+		<%= f.submit update ? "Update" : "Create Finished Jewelry"%>
+	</p>
+
+<% end %>

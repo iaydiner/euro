@@ -1,4 +1,9 @@
 class Fjewelry < ActiveRecord::Base
+	has_attached_file :fjewelry_img, styles: { fjewelry_index: "300x300>", fjewelry_show: "500x500>" }, default_url: "/images/:style/missing.png"
+	 	
+  	validates_attachment_content_type :fjewelry_img, content_type: /\Aimage\/.*\z/
+
+
 	scope :jewelry_type, ->(jewelry_types) { where(:jewelry_type => jewelry_types) }
 	JEWELRY_TYPES = [
 		"Earrings",

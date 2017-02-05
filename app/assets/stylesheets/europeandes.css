@@ -577,7 +577,7 @@ z-index: 7;
 #sidebar-fj li {
     display: block;
     color: #f0ffff;
-    padding: 8px 16px;
+    padding: 5px 16px 0 8px;
     text-decoration: none;
 }
 
@@ -591,20 +591,18 @@ z-index: 7;
     color: white;
 }
 
-#sidebar-fj .checkboxily {
-padding-top:0px;
-}
-
 #sidebar-fj .checkboxily label[for*="f"]
 {
     position:relative;
-    top: 1px;
+    /*top: 1px;*/
 	display:block;
-	padding:0.2rem;
+	/*padding:0.2rem;*/
+	margin-bottom: 0;
+	font-weight: normal;
 }
 
 #sidebar-fj .checkboxily {
-	padding:0 0 1rem 1rem;
+	padding:0 0 0.1rem 1rem;
 }
 
 #sidebar-fj li p {
@@ -613,6 +611,6 @@ border-bottom-width:0.2rem;
 border-style:solid;
 border-color:red;
 background-color: yellow;
-margin-top:0.5rem;
+margin-top:0.1rem;
 margin-bottom:0.3rem;
 }

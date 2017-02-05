@@ -11,19 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170123014224) do
+ActiveRecord::Schema.define(version: 20170204220748) do
 
   create_table "fjewelries", force: :cascade do |t|
     t.string   "title"
     t.text     "short_desc"
     t.text     "long_desc"
     t.string   "sku"
-    t.decimal  "price",        precision: 10, scale: 2
+    t.decimal  "price",                     precision: 10, scale: 2
     t.string   "jewelry_type"
     t.string   "metal"
     t.string   "color"
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
+    t.string   "stone"
+    t.string   "fjewelry_img_file_name"
+    t.string   "fjewelry_img_content_type"
+    t.integer  "fjewelry_img_file_size"
+    t.datetime "fjewelry_img_updated_at"
   end
 
   create_table "gemstones", force: :cascade do |t|
