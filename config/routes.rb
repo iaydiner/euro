@@ -20,12 +20,9 @@ Rails.application.routes.draw do
   resources :tools
   resources :toolcategories
   resources :fjewelries
+  resources :findings
 
-  ## Navigation Header - Finished Jewelry
-  ###get 'finishedjewelry', to:'finishedjewelry#index'
 
-  ## Navigation Header - Findings
-  get 'findings', to:'findings#findingshome'
 
   ##below line adds many routes automaticly
   resources :admgemstones

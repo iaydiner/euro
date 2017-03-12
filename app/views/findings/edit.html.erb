@@ -1,0 +1,16 @@
+<div class="col-lg-2" style="padding: 2rem;">
+</div>
+<div class="col-lg-6">
+<h1> Edit existing Finding</h1>
+<% if @finding.errors.any? %>
+<h2 style="color:red;">The following errors prevented the gemstone from getting created</h2>
+<ul>
+	<% @finding.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+</ul>
+<% end %>
+
+<%= render 'form', finding: @finding, update: true -%>
+<%= link_to "Back to Finding listing", findings_path %>
+</div>

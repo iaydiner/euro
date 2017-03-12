@@ -1,0 +1,18 @@
+<div class="col-lg-2" style="padding: 2rem;">
+</div>
+<div class="col-lg-6">
+<h1>Create a Finding</h1>
+
+<% if @finding.errors.any? %>
+<h2>The following errors prevented the finding record from getting created</h2>
+<ul>
+	<% @finding.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+</ul>
+<% end %>
+
+<%= render 'form', finding: @finding, update: false -%>
+
+<%= link_to "Back to finding listing", findings_path %>
+</div>

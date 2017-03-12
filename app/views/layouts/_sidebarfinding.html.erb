@@ -1,0 +1,56 @@
+<div id="sidebar-fj" class="container-fluid"> 
+<!-- BEGIN SIDEBAR -->
+	<div id="fj-filter" class="col-xs-2 col-lg-2">	
+		 <div class="collapse navbar-collapse">
+
+	<form action="/findings" method="get">
+
+			<div>
+				<ul>
+				<li>
+					<h4>Type</h4>
+					<p></p>
+					<div class="checkboxily">
+						<%- Finding::FINDING_TYPES.each do |finding_type| -%>
+			            <label for="fa1">  
+			              <%= check_box_tag 'finding_type[]', finding_type, (params[:finding_type] && params[:finding_type].include?(finding_type)) %>
+			              <em style="font-size: 1.4rem;"><%= finding_type.gsub(/\_/," ") %></em>
+			            </label>
+         				<%- end -%>	
+					</div>
+				</li>
+				<li>
+					<h4>Metal</h4>
+					<p></p>
+					<div class="checkboxily">
+						<%- Finding::METALS.each do |metal| -%>
+			            <label for="fb1">  
+			              <%= check_box_tag 'metal[]', metal, (params[:metal] && params[:metal].include?(metal)) %>
+			              <em style="font-size: 1.4rem;"><%= metal.gsub(/\_/," ") %></em>
+			            </label>
+         				<%- end -%>	
+					</div>
+				</li>	
+				<li>
+					<h4>Color</h4>
+					<p></p>
+					<div class="checkboxily">
+						<%- Finding::COLORS.each do |color| -%>
+			            <label for="fc1">  
+			              <%= check_box_tag 'color[]', color, (params[:color] && params[:color].include?(color)) %>
+			              <em style="font-size: 1.4rem;"><%= color.gsub(/\_/," ") %></em>
+			            </label>
+         				<%- end -%>	
+					</div>
+				</li>	
+			
+				</ul>
+			</div>
+	<button type='submit' class="btn btn-info" style="float:right;vertical-align:middle;color:#fff;width: 100%;background-color: red;">Search</button>
+    <br>
+  </form>
+
+  
+  <br>
+		</div>
+	</div>

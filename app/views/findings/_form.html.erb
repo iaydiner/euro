@@ -1,0 +1,42 @@
+<%= form_for finding do |f| %>
+<p>
+	<%=  f.file_field :finding_img %>
+</p>
+	<p>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label :short_desc %><br>
+		<%= f.text_field :short_desc %>
+	</p>
+	<p>
+		<%= f.label :long_desc %><br>
+		<%= f.text_field :long_desc %>
+	</p>
+	<p>
+		<%= f.label :sku, 'SKU' %><br>
+		<%= f.text_field :sku %>
+	</p>
+	<p>
+		<%= f.label :price %><br>
+		<%= f.text_field :price %>
+	</p>
+	<p>
+		<%= f.label :finding_type, 'Type' %><br>
+		<%= f.select :finding_type, Finding::FINDING_TYPES -%>
+	</p>
+	<p>
+		<%= f.label :metal, 'Metal' %><br>
+		<%= f.select :metal, Finding::METALS %>
+	</p>
+	<p>
+		<%= f.label :color, 'Color' %><br>
+		<%= f.select :color, Finding::COLORS %>
+	</p>
+
+	<p>
+		<%= f.submit update ? "Update" : "Create Finding"%>
+	</p>
+
+<% end %>
